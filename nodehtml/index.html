@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>i</title>
+</head>
+<body>
+    <form>
+       <input type="text" name="" id="num1">
+       <input type="text" name="" id="num2">
+       <input type="button" value="Submit" onclick="publish()">
+    </form>
+    <script>
+        function publish(){
+            var n1 = document.getElementById('num1').value;
+            var n2 = document.getElementById('num2').value;
+            location.href="http:localhost:2000"+"?number1="+n1+"&number2="+n2;
+        }
+    </script>
+</body>
+</html>
