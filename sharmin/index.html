@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="application/javascript">
+    window.onload = () => {
+        document.getElementById("button1").addEventListener("click", () => {
+            let id = document.getElementById("etext1").value;
+            let firstName = document.getElementById("etext2").value;
+            let lastName = document.getElementById("etext3").value;
+            let age = document.getElementById("etext4").value;
+            let canVote = document.getElementById("etext5").value;
+            let canDrive = document.getElementById("etext6").value;
+
+            let str="id="+id+"&firstName="+firstName+"&lastName="+lastName+"&age="+age+"&canVote="+canVote+"&canDrive="+canDrive;
+            
+            location.href = "http://localhost:8080/Employee?" + str;
+        },false);
+
+        document.getElementById("button2").addEventListener("click", () => {
+            let id = document.getElementById("ptext1").value;
+            let firstName = document.getElementById("ptext2").value;
+            let lastName = document.getElementById("ptext3").value;
+            let age = document.getElementById("ptext4").value;
+            let canVote = document.getElementById("ptext5").value;
+            let canDrive = document.getElementById("ptext6").value;
+            let salary = document.getElementById("ptext7").value;
+
+            let str = "id="+id+"&firstName="+firstName+"&lastName="+lastName+"&age="+age+"&canVote="+canVote+"&canDrive="+canDrive+"&salary="+salary;
+            
+            location.href = "http://localhost:8080/Person?" + str;
+        },false);
+    }
+    </script>
+</head>
+
+<body>
+    <frameset>
+        <legend>Employee:</legend>
+        <div style="background-color: rgb(100, 58, 4); padding: 15px">
+            <input type="text" name="etext1" id="etext1" placeholder="id">
+            <input type="text" name="etext2" id="etext2" placeholder="firstName">
+            <input type="text" name="etext3" id="etext3" placeholder="lastName">
+            <input type="text" name="etext4" id="etext4" placeholder="age">
+            <input type="text" name="etext5" id="etext5" placeholder="canVote">
+            <input type="text" name="etext6" id="etext6" placeholder="canDrive">
+            <input type="button" value="Send Employee" id="button1">
+        </div>
+    </frameset>
+    <br />
+    <frameset>
+        <legend>Person:</legend>
+        <div style="background-color: rgb(10, 71, 128); padding: 15px">
+                <input type="text" name="ptext1" id="ptext1" placeholder="id">
+                <input type="text" name="ptext2" id="ptext2" placeholder="firstName">
+                <input type="text" name="ptext3" id="ptext3" placeholder="lastName">
+                <input type="text" name="ptext4" id="ptext4" placeholder="age">
+                <input type="text" name="ptext5" id="ptext5" placeholder="canVote">
+                <input type="text" name="ptext6" id="ptext6" placeholder="canDrive">
+                <input type="text" name="ptext7" id="ptext7" placeholder="salary">
+                <input type="button" value="Send Person" id="button2">
+
+        </div>
+    </frameset>
+</body>
+
+</html>
